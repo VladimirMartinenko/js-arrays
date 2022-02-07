@@ -48,5 +48,15 @@ const users = [
 
 const newArrey = users.map(callback);
 function callback(user,index,arr) {
-return user[user.telefonNumber=555];
-}
+user.telefonNumber=555;
+return user;
+};
+
+const users1 = [
+  { firstName: "Test", lastName: "Testovich", age: 27, gender: "male" },
+  { firstName: "User", lastName: "Userovich", age: 12, gender: "male" },
+  { firstName: "Test`ya", lastName: "Testovina", age: 16, gender: "female" },
+  { firstName: "Logina", lastName: "Consol`evna", age: 42, gender: "female" },
+  { firstName: "Undefined", lastName: "Undefinovich", age: 99 },
+  { firstName: "Null", lastName: "Nullovich", gender: "male" },
+];
