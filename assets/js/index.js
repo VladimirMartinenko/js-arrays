@@ -60,3 +60,9 @@ const users1 = [
   { firstName: "Undefined", lastName: "Undefinovich", age: 99 },
   { firstName: "Null", lastName: "Nullovich", gender: "male" },
 ];
+const newUsers1 = users1.filter(callback);
+function callback (user,index,arr) {
+  if(user.age>=16 && user.gender === "male") {
+    return true
+  } 
+}
