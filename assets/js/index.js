@@ -35,9 +35,11 @@ const names = [
 ];
 
 names.forEach(callback);
-function callback(user,index,arr){
-  console.log(`${user.firstName} ${user.lastName} является ${user.gender} и ему сейчас ${user.age} лет`);
-};
+function callback(user, index, arr) {
+  console.log(
+    `${user.firstName} ${user.lastName} является ${user.gender} и ему сейчас ${user.age} лет`
+  );
+}
 
 const users = [
   { firstName: "Test", lastName: "Testovich", age: 42, gender: "male" },
@@ -47,10 +49,10 @@ const users = [
 ];
 
 const newArrey = users.map(callback);
-function callback(user,index,arr) {
-user.telefonNumber=555;
-return user;
-};
+function callback(user, index, arr) {
+  user.telefonNumber = 555;
+  return user;
+}
 
 const users1 = [
   { firstName: "Test", lastName: "Testovich", age: 27, gender: "male" },
@@ -61,8 +63,12 @@ const users1 = [
   { firstName: "Null", lastName: "Nullovich", gender: "male" },
 ];
 const newUsers1 = users1.filter(callback);
-function callback (user,index,arr) {
-  if(user.age>=16 && user.gender === "male") {
-    return true
-  } 
+function callback(user, index, arr) {
+  if (user.age >= 16 && user.gender === "male") {
+    return true;
+  }
 }
+
+const arr3 = [1, 2, 3, [10, 20, 30, [100, 200, 300, [1000, 2000, 3000]]]];
+
+const arr4 = arr3.flat(Infinity);
